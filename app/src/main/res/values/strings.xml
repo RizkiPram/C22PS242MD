@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">TujuTuju</string>
+    <string name="invalid_password">Password Need to more than six</string>
+    <string name="text_discover">Let\'s Discover Bali With TujuTuju</string>
+    <string name="logo">Logo</string>
+    <string name="image_rv">Image Rv</string>
+    <string name="favourite">Favourite</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="handphone">Handphone</string>
+    <string name="password">Password</string>
+    <string name="change_password">Change Password</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="profile">Profile</string>
+    <string name="img_location">img_location</string>
+</resources>
