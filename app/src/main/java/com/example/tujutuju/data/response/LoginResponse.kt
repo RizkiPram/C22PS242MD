@@ -8,7 +8,7 @@ data class LoginResponse(
 	val data: Data,
 
 	@field:SerializedName("meta")
-	val meta: Meta
+	val dataChangePassword: DataChangePassword
 )
 
 data class Data(

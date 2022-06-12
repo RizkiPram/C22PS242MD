@@ -4,14 +4,14 @@ import com.google.gson.annotations.SerializedName
 
 data class PlaceResponse(
 
-	@field:SerializedName("pagination")
+    @field:SerializedName("pagination")
 	val pagination: Pagination,
 
-	@field:SerializedName("data")
-	val data: List<DataItem>,
+    @field:SerializedName("data")
+	val data: List<SearchItem>,
 
-	@field:SerializedName("meta")
-	val meta: Meta
+    @field:SerializedName("meta")
+	val dataChangePassword: DataChangePassword
 )
 
 data class Review(

@@ -2,8 +2,10 @@ package com.example.tujutuju.api
 
 import android.service.autofill.UserData
 import com.example.tujutuju.LoginInformation
+import com.example.tujutuju.data.response.ChangePasswordResponse
 import com.example.tujutuju.data.response.LoginResponse
 import com.example.tujutuju.data.response.RegisterResponse
+import com.example.tujutuju.data.response.SearchResponse
 import okhttp3.MultipartBody
 import retrofit2.Call
 import retrofit2.http.*
@@ -20,7 +22,7 @@ interface ApiService {
     fun register(@Body useInfo:LoginInformation):Call<RegisterResponse>
 
     @GET("search")
-    fun search()
+    fun search(@Query ("q")id:String):Call<SearchResponse>
 
     @Multipart
     @POST("me/avatar")
@@ -33,5 +35,5 @@ interface ApiService {
     fun changePassword(
         @Header("Authorization") token:String,
         @Body userInfo: LoginInformation
-    ):Call<LoginResponse>
+    ):Call<ChangePasswordResponse>
 }
