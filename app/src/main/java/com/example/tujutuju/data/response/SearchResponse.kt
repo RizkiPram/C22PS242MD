@@ -1,45 +1,93 @@
 package com.example.tujutuju.data.response
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
+
 
 data class SearchResponse(
 
-	@field:SerializedName("pagination")
-	val pagination: Pagination,
-
 	@field:SerializedName("data")
-	val data: List<SearchItem>,
+	val searchData: SearchData,
 
 	@field:SerializedName("meta")
-	val meta: SearchMeta
+	val meta: Meta
 )
 
-data class ReviewPlace(
+data class SearchData(
 
-	@field:SerializedName("average_rating")
-	val averageRating: Double
+	@field:SerializedName("places")
+	val places: List<PlacesItem>,
 
+	@field:SerializedName("foods")
+	val foods: List<FoodsItem>,
+
+	@field:SerializedName("restaurants")
+	val restaurants: List<RestaurantsItem>
 )
+@Parcelize
+data class PlacesItem(
 
-data class SearchMeta(
-
-	@field:SerializedName("code")
-	val code: Int,
-
-	@field:SerializedName("message")
-	val message: String
-)
-
-data class SearchItem(
-
-	@field:SerializedName("image")
-	val image: String,
+	@field:SerializedName("images")
+	val images: List<String>,
 
 	@field:SerializedName("address")
 	val address: String,
 
+	@field:SerializedName("latitude")
+	val latitude: Double,
+
+	@field:SerializedName("name")
+	val name: String,
+
+	@field:SerializedName("description")
+	val description: String,
+
+	@field:SerializedName("id")
+	val id: Int,
+
+	@field:SerializedName("longitude")
+	val longitude: Double
+) : Parcelable
+
+data class RestaurantsItem(
+
+	@field:SerializedName("images")
+	val images: List<String>,
+
+	@field:SerializedName("address")
+	val address: String,
+
+	@field:SerializedName("phone")
+	val phone: String,
+
 	@field:SerializedName("review")
-	val review: ReviewPlace,
+	val searchReview: SearchReview,
+
+	@field:SerializedName("latitude")
+	val latitude: Double,
+
+	@field:SerializedName("name")
+	val name: String,
+
+	@field:SerializedName("description")
+	val description: String,
+
+	@field:SerializedName("id")
+	val id: Int,
+
+	@field:SerializedName("email")
+	val email: String,
+
+	@field:SerializedName("longitude")
+	val longitude: Double
+)
+
+
+data class FoodsItem(
+
+	@field:SerializedName("images")
+	val images: List<String>,
 
 	@field:SerializedName("name")
 	val name: String,
@@ -51,3 +99,8 @@ data class SearchItem(
 	val id: Int
 )
 
+data class SearchReview(
+
+	@field:SerializedName("average_rating")
+	val averageRating: Double
+)

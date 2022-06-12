@@ -19,9 +19,10 @@ import com.example.tujutuju.R
 import com.example.tujutuju.adapter.PlaceAdapter
 import com.example.tujutuju.data.lokal.UserModel
 import com.example.tujutuju.data.lokal.UserPreferences
-import com.example.tujutuju.data.response.SearchItem
+import com.example.tujutuju.data.response.PlacesItem
 import com.example.tujutuju.databinding.ActivityMainBinding
 import com.example.tujutuju.ui.ViewModelFactory
+import com.example.tujutuju.ui.detail.DetailActivity
 import com.example.tujutuju.ui.login.LoginActivity
 import com.example.tujutuju.ui.profile.ProfileActivity
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
@@ -42,7 +43,12 @@ class MainActivity : AppCompatActivity() {
         val itemDecoration = DividerItemDecoration(this, layoutManager.orientation)
         binding.rvPlace.addItemDecoration(itemDecoration)
         setupViewModel()
-
+        viewModel.isLoading.observe(this){
+            showLoading(it)
+        }
+        viewModel.place.observe(this){
+            setSearchData(it)
+        }
         val search = binding.searchView
         val searchManager=getSystemService(Context.SEARCH_SERVICE)  as SearchManager
         search.setSearchableInfo(searchManager.getSearchableInfo(componentName))
@@ -70,12 +76,7 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         }
-        viewModel.isLoading.observe(this){
-            showLoading(it)
-        }
-        viewModel.place.observe(this){
-            setSearchData(it)
-        }
+
     }
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         val inflater=menuInflater
@@ -94,21 +95,29 @@ class MainActivity : AppCompatActivity() {
                 viewModel.logout()
                 finish()
             }
-            R.id.navigation_favourite -> {}
         }
         return super.onOptionsItemSelected(item)
     }
-    private fun setSearchData(data:List<SearchItem>){
-        val  listPlace =ArrayList<SearchItem>()
+    private fun setSearchData(data:List<PlacesItem>){
+        val  listPlace =ArrayList<PlacesItem>()
         for (id in data){
             listPlace.add(id)
         }
         val adapter = PlaceAdapter(listPlace)
         binding.rvPlace.adapter=adapter
-
+        adapter.setOnItemClickCallback(object : PlaceAdapter.OnItemClickCallback{
+            override fun onItemClicked(data: PlacesItem) {
+                moveDetail(data)
+            }
+        })
     }
     private fun showLoading(isLoading: Boolean) {
         binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+    }
+    private fun moveDetail(data: PlacesItem){
+        val intent= Intent(this, DetailActivity::class.java)
+        intent.putExtra(DetailActivity.EXTRA_DETAIL,data)
+        startActivity(intent)
     }
     companion object{
         const val CAMERA_X_RESULT = 200

@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/bangkit/capstone/app/src/main/res/drawable/bg_btn_secondary.xml" value="0.111" />
         <entry key="..\:/bangkit/capstone/app/src/main/res/drawable/bg_button.xml" value="0.111" />
+        <entry key="..\:/bangkit/capstone/app/src/main/res/drawable/button_toggle.xml" value="0.111" />
         <entry key="..\:/bangkit/capstone/app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.1" />
         <entry key="..\:/bangkit/capstone/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.1" />
         <entry key="..\:/bangkit/capstone/app/src/main/res/drawable/ic_baseline_supervisor_account_24.xml" value="0.1" />
@@ -12,6 +13,8 @@
         <entry key="..\:/bangkit/capstone/app/src/main/res/layout/activity_camera.xml" value="0.17074275362318841" />
         <entry key="..\:/bangkit/capstone/app/src/main/res/layout/activity_change_password.xml" value="0.17074275362318841" />
         <entry key="..\:/bangkit/capstone/app/src/main/res/layout/activity_change_picture.xml" value="0.17074275362318841" />
+        <entry key="..\:/bangkit/capstone/app/src/main/res/layout/activity_detail.xml" value="0.22" />
+        <entry key="..\:/bangkit/capstone/app/src/main/res/layout/activity_favourite.xml" value="0.1" />
         <entry key="..\:/bangkit/capstone/app/src/main/res/layout/activity_login.xml" value="0.17074275362318841" />
         <entry key="..\:/bangkit/capstone/app/src/main/res/layout/activity_main.xml" value="0.17074275362318841" />
         <entry key="..\:/bangkit/capstone/app/src/main/res/layout/activity_profile.xml" value="0.33" />
@@ -19,6 +22,7 @@
         <entry key="..\:/bangkit/capstone/app/src/main/res/layout/fragment_favourite.xml" value="0.17074275362318841" />
         <entry key="..\:/bangkit/capstone/app/src/main/res/layout/fragment_home.xml" value="0.17074275362318841" />
         <entry key="..\:/bangkit/capstone/app/src/main/res/layout/fragment_profile.xml" value="0.17074275362318841" />
+        <entry key="..\:/bangkit/capstone/app/src/main/res/layout/item_favourite.xml" value="0.1" />
         <entry key="..\:/bangkit/capstone/app/src/main/res/layout/item_rv.xml" value="0.17074275362318841" />
         <entry key="..\:/bangkit/capstone/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20416666666666666" />
       </map>

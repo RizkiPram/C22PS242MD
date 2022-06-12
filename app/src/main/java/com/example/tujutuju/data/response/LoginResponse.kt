@@ -4,10 +4,10 @@ import com.google.gson.annotations.SerializedName
 
 data class LoginResponse(
 
-	@field:SerializedName("data")
+    @field:SerializedName("data")
 	val data: Data,
 
-	@field:SerializedName("meta")
+    @field:SerializedName("meta")
 	val dataChangePassword: DataChangePassword
 )
 
