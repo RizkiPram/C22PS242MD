@@ -8,6 +8,8 @@ data class UserModel(
     val name: String,
     val email: String,
     val password: String,
+    val phone:String,
+    val avatar : String,
     val token: String,
     val isLogin: Boolean
 ): Parcelable

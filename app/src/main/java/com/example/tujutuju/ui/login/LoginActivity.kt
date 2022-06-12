@@ -39,7 +39,7 @@ class LoginActivity : AppCompatActivity() {
         viewModel.getUser().observe(this){
             if (it.isLogin){
                 val intent= Intent(this, MainActivity::class.java)
-                //intent.putExtra(StoryActivity.EXTRA_USER,it)
+                intent.putExtra(MainActivity.EXTRA_USER,it)
                 startActivity(intent)
                 finish()
             }
