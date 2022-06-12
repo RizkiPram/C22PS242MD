@@ -16,4 +16,12 @@
     <string name="profile">Profile</string>
     <string name="img_location">img_location</string>
     <string name="logout">Logout</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="camera">Camera</string>
+    <string name="galery">Galery</string>
+    <string name="switch_camera">Switch Camera</string>
+    <string name="take_picture">Take Picture</string>
+    <string name="change_profile_picture">Change Profile Picture</string>
+    <string name="upload">Upload</string>
 </resources>

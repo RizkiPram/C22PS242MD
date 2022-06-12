@@ -8,6 +8,10 @@
         <entry key="..\:/bangkit/capstone/app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.1" />
         <entry key="..\:/bangkit/capstone/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.1" />
         <entry key="..\:/bangkit/capstone/app/src/main/res/drawable/ic_baseline_supervisor_account_24.xml" value="0.1" />
+        <entry key="..\:/bangkit/capstone/app/src/main/res/drawable/ic_place_holder.xml" value="0.111" />
+        <entry key="..\:/bangkit/capstone/app/src/main/res/layout/activity_camera.xml" value="0.17074275362318841" />
+        <entry key="..\:/bangkit/capstone/app/src/main/res/layout/activity_change_password.xml" value="0.17074275362318841" />
+        <entry key="..\:/bangkit/capstone/app/src/main/res/layout/activity_change_picture.xml" value="0.17074275362318841" />
         <entry key="..\:/bangkit/capstone/app/src/main/res/layout/activity_login.xml" value="0.17074275362318841" />
         <entry key="..\:/bangkit/capstone/app/src/main/res/layout/activity_main.xml" value="0.17074275362318841" />
         <entry key="..\:/bangkit/capstone/app/src/main/res/layout/activity_profile.xml" value="0.33" />
