@@ -15,4 +15,5 @@
     <string name="title_notifications">Notifications</string>
     <string name="profile">Profile</string>
     <string name="img_location">img_location</string>
+    <string name="logout">Logout</string>
 </resources>
