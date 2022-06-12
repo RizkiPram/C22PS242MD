@@ -8,7 +8,7 @@ data class PlaceResponse(
 	val pagination: Pagination,
 
     @field:SerializedName("data")
-	val data: List<SearchItem>,
+	val data: List<DataItem>,
 
     @field:SerializedName("meta")
 	val dataChangePassword: DataChangePassword
@@ -22,28 +22,28 @@ data class Review(
 
 data class DataItem(
 
-	@field:SerializedName("images")
+    @field:SerializedName("images")
 	val images: List<String>,
 
-	@field:SerializedName("address")
+    @field:SerializedName("address")
 	val address: String,
 
-	@field:SerializedName("review")
-	val review: Review,
+    @field:SerializedName("review")
+	val searchReview: SearchReview,
 
-	@field:SerializedName("latitude")
+    @field:SerializedName("latitude")
 	val latitude: Double,
 
-	@field:SerializedName("name")
+    @field:SerializedName("name")
 	val name: String,
 
-	@field:SerializedName("description")
+    @field:SerializedName("description")
 	val description: String,
 
-	@field:SerializedName("id")
+    @field:SerializedName("id")
 	val id: Int,
 
-	@field:SerializedName("longitude")
+    @field:SerializedName("longitude")
 	val longitude: Double
 )
 

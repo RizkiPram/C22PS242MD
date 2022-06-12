@@ -5,7 +5,7 @@ import androidx.lifecycle.*
 import com.example.tujutuju.api.ApiConfig
 import com.example.tujutuju.data.lokal.UserModel
 import com.example.tujutuju.data.lokal.UserPreferences
-import com.example.tujutuju.data.response.SearchItem
+import com.example.tujutuju.data.response.PlacesItem
 import com.example.tujutuju.data.response.SearchResponse
 import kotlinx.coroutines.launch
 import retrofit2.Call
@@ -13,15 +13,15 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class MainViewModel(private val pref: UserPreferences):ViewModel() {
-    private val _place = MutableLiveData<List<SearchItem>>()
-    val place: LiveData<List<SearchItem>> = _place
+    private val _place = MutableLiveData<List<PlacesItem>>()
+    val place: LiveData<List<PlacesItem>> = _place
 
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
 
-    fun setSearch(query:String){
+    fun setSearch(q:String){
         _isLoading.value=true
-        val client = ApiConfig.getApiService().search(query)
+        val client = ApiConfig.getApiService().search(q)
         client.enqueue(object : Callback<SearchResponse>{
             override fun onResponse(
                 call: Call<SearchResponse>,
@@ -29,7 +29,7 @@ class MainViewModel(private val pref: UserPreferences):ViewModel() {
             ) {
                 _isLoading.value=false
                 if (response.isSuccessful){
-                    _place.value =response.body()?.data
+                    _place.value =response.body()?.searchData?.places
                 }else{
                     Log.e(TAG,"onFailure:${response.message()}")
                 }

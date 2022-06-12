@@ -24,4 +24,7 @@
     <string name="take_picture">Take Picture</string>
     <string name="change_profile_picture">Change Profile Picture</string>
     <string name="upload">Upload</string>
+    <string name="image_detail">image detail</string>
+    <string name="about_this_place">About This Place</string>
+    <string name="location">Location</string>
 </resources>
